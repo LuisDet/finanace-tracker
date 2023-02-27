@@ -1,4 +1,4 @@
-function FinanceCard({ title, description, amount }) {
+function FinanceCard ({ title, description, amount }) {
   return (
     <div className='flex gap-8 items-center justify-between bg-gray-700 p-4 rounded'>
       <div className=''>
