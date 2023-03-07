@@ -6,7 +6,7 @@ function FinanceList () {
   const financeInfo = useFinanceTransaction((state) => (state.financeTransaction))
 
   return (
-    <div className='flex gap-2 flex-col'>
+    <div className='flex gap-4 flex-col'>
       {financeInfo.map((finance, idx) => (
         <FinanceCard key={idx}
           title={finance.title}

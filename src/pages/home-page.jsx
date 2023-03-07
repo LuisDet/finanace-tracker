@@ -12,17 +12,17 @@ function HomePage () {
   const money = useAllMoney(state => state.money)
 
   return (
-    <div className='flex flex-col gap-4 mt-20 p-4'>
-      <div className='flex flex-col items-center gap-2'>
+    <div className='flex flex-col gap-4 mt-20'>
+      <div className='flex flex-col items-center gap-2  '>
         <TextHeader className='text-white text-3xl'>Monto Total</TextHeader>
-        <div className='flex gap-1 text-white text-3xl'>
+        <div className='flex gap-1 text-white text-3xl  '>
           <p>${money}.00</p>
           <div className='relative'>
             <Menu>
-              <Menu.Button className='underline decoration-2 decoration-dotted text-sky-300 cursor-pointer'>
+              <Menu.Button className='underline decoration-2 decoration-dotted text-sky-300 cursor-pointer '>
                 {coin}
               </Menu.Button>
-              <Menu.Items className='flex flex-col absolute bg-black p-4 rounded gap-2'>
+              <Menu.Items className='flex flex-col absolute bg-black p-4 rounded gap-2 '>
                 {coins.map((currentCoin, idx) => (
                   <Menu.Item key={idx}>
                     {({ active }) => (

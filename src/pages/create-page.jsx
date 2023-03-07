@@ -61,7 +61,7 @@ function CreatePage () {
     location[SET_LOCATION]('/')
   }
 
-  return <div className="w-full p-4">
+  return <div className="w-full">
         <form action="" className="flex flex-col w-full gap-6" >
             <div className="flex flex-col gap-2">
                 <label htmlFor="" className="text-white font-bold text-lg">Monto</label>
