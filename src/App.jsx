@@ -21,7 +21,7 @@ function App () {
             <Link to='/'>Home</Link>
             <Link to='/create'>Create</Link>
             <Link to='/category'>Category</Link>
-            <p>HOME</p>
+            <p>HOME</p>on
             <p>HOME</p>
           </div>
         </footer>
