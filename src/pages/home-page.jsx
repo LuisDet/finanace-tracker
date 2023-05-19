@@ -45,7 +45,7 @@ function HomePage () {
         </div>
       </div>
       <div>
-        <p className='text-white text-lg mb-2 '>Hoy</p>
+        <p className='text-white text-lg mb-2 before:'>27 Feb 2023</p>
         <FinanceList />
       </div>
     </div>

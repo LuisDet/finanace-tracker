@@ -1,17 +1,17 @@
 import { create } from 'zustand'
 
 const useCategoriesStore = create((set) => ({
-  categories: [{id: 1, title: 'Gustino'}],
+  categories: [{ id: 1, title: 'Gustino' }],
   setCategory: (currentCategory) => set(state => {
-    console.log(currentCategory )
+    console.log(currentCategory)
 
     return (
-      {categories: [...state.categories, currentCategory]}
+      { categories: [...state.categories, { ...currentCategory, id: +Date }] }
     )
   }),
   deleteCategory: (categoryId) => set(state => {
-    const newCategories = state.categories.filter( category => category.id !== categoryId)
-    return {categories : newCategories}
+    const newCategories = state.categories.filter(category => category.id !== categoryId)
+    return { categories: newCategories }
   })
 }))
 

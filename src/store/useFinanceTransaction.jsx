@@ -5,62 +5,10 @@ const useFinanceTransaction = create((set) => ({
     {
       title: 'Hola',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
+      amount: 1300000
     }, {
       title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
-      amount: 300
-    }, {
-      title: 'Hola',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
+      description: 'Lore  wm ipsum dolor sit amet consectetur adipisicing elit. Earum, tempore.',
       amount: 300
     }
   ],

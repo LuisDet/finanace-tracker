@@ -1,6 +1,7 @@
 import { useFinanceMovement } from '../store/useFinanceMovement'
 import { shallow } from 'zustand/shallow'
 import { useFinanceTransaction } from '../store/useFinanceTransaction'
+import { useCategoriesStore } from '../store/useCategories'
 import { useLocation } from 'wouter'
 
 const SET_LOCATION = 1
@@ -10,14 +11,20 @@ function CreatePage () {
   const data = useFinanceMovement(state => ({
     amount: state.amount,
     category: state.category,
-    description: state.description
+    description: state.description,
+    badge: state.badge
   }), shallow)
 
   const methods = useFinanceMovement(state => ({
     setAmount: state.setAmount,
     setCategory: state.setCategory,
     setDescription: state.setDescription,
+    setBadge: state.setBadge,
     resetData: state.resetData
+  }), shallow)
+
+  const categoryData = useCategoriesStore(state => ({
+    categories: state.categories
   }), shallow)
 
   const setFinanceTransaction = useFinanceTransaction(state => state.setFinanceTransaction)
@@ -61,13 +68,17 @@ function CreatePage () {
     location[SET_LOCATION]('/')
   }
 
+  const handleOptionsBadge = (e) => {
+    methods.setBadge(e.target.value)
+  }
+
   return <div className="w-full">
         <form action="" className="flex flex-col w-full gap-6" >
             <div className="flex flex-col gap-2">
                 <label htmlFor="" className="text-white font-bold text-lg">Monto</label>
                 <div className="flex">
                     <input type="number" value={data.amount} className="w-full p-3 bg-slate-600 text-white rounded-l outline-none " onChange={handlAmount}/>
-                    <select name="" id="" className="bg-slate-700 p-4 text-white rounded-r">
+                    <select name="coin" id="" className="bg-slate-700 p-4 text-white rounded-r" onInput= {(e) => { handleOptionsBadge(e) } }>
                         <option value="RD">RD</option>
                         <option value="US">US</option>
                         <option value="EU">EU</option>
@@ -76,7 +87,16 @@ function CreatePage () {
             </div>
             <div className="flex flex-col">
                 <label htmlFor="" className="text-white font-bold text-lg">Categoria</label>
-                <input type="text" placeholder='Category' value={data.category} className="w-full p-4 rounded bg-slate-600 text-white outline-none" onChange={handleCategory}/>
+                    <select name="coin" id="" className="bg-slate-700 p-4 text-white rounded-r" onInput= {(e) => { handleOptionsBadge(e) } }>
+                    {
+                      categoryData.categories.map(category => (
+                        <option key={category.id}
+                          value={category.title}>
+                              {category.title}
+                        </option>))
+                    }
+                </select>
+                {/* <input type="text" placeholder='Category' value={data.category} className="w-full p-4 rounded bg-slate-600 text-white outline-none" onChange={handleCategory}/> */}
             </div>
             <div className="flex flex-col">
                 <label htmlFor="" className="text-white font-bold text-lg">Descripcion</label>
