@@ -12,7 +12,8 @@ function CreatePage () {
     amount: state.amount,
     category: state.category,
     description: state.description,
-    badge: state.badge
+    badge: state.badge,
+    operation: state.operation
   }), shallow)
 
   const methods = useFinanceMovement(state => ({
@@ -20,6 +21,7 @@ function CreatePage () {
     setCategory: state.setCategory,
     setDescription: state.setDescription,
     setBadge: state.setBadge,
+    setOperation: state.setOperation,
     resetData: state.resetData
   }), shallow)
 
@@ -84,6 +86,16 @@ function CreatePage () {
                         <option value="EU">EU</option>
                     </select>
                 </div>
+            </div>
+            <div className='flex items-center justify-evenly gap-4'>
+              <label className={`text-white ${data.operation === 0 ? 'bg-red-500' : 'bg-gray-600'} w-full text-center p-3 rounded cursor-pointer`} onClick={() => { methods.setOperation(0) } }>
+                Gasto
+               <input type="radio" name="operation" id="1" className='hidden' value='0'/>
+              </label>
+              <label className={`text-white ${data.operation === 1 ? 'bg-green-500' : 'bg-gray-600'} w-full text-center p-3 rounded cursor-pointer`} onClick={() => { methods.setOperation(1) } }>
+                Ingreso
+              <input type="radio" name="operation" id="2" className='hidden' value='1'/>
+              </label>
             </div>
             <div className="flex flex-col">
                 <label htmlFor="" className="text-white font-bold text-lg">Categoria</label>
